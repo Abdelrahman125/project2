@@ -1,4 +1,4 @@
-print("🤖 Hello! I am your simple chatbot. Type 'bye' to exit.\n")
+print("🤖 Hello! I am your simple chatbot. Type 'bye' to exit.\n ")
 
 responses = {
     "hello": "Hi there!",
