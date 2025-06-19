@@ -1,2 +1,2 @@
 # project2
-AI project (simple chatgpt)
+AI project (Sentiment Analysis)
