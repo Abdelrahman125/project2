@@ -1,13 +1,11 @@
-# Simple Python Chatbot 🤖
+# Sentiment Analysis NLP Project 🧠
 
-A basic rule-based chatbot written in Python.
+This is a simple AI project that analyzes the **sentiment of text** using Python and the `TextBlob` library.  
+It classifies input text as **Positive**, **Negative**, or **Neutral**.
 
-## Features
+## 🚀 How to Run
 
-- Responds to greetings and basic questions
-- Pure Python (no external libraries)
-
-## How to Run
-
-```bash
+1. Install the required library:
+   ```bash
+   pip install textblob
 python main.py
