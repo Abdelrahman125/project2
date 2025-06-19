@@ -1,18 +1,21 @@
-print("🤖 Hello! I am your simple chatbot. Type 'bye' to exit.\n ")
+from textblob import TextBlob
 
-responses = {
-    "hello": "Hi there!",
-    "how are you": "I'm just a program, but I'm doing fine!",
-    "what is your name": "I'm PyBot, your friendly assistant.",
-    "bye": "Goodbye! Have a nice day!"
-}
+print("🧠 Welcome to Sentiment Analyzer!")
+print("Type 'exit' to quit.\n")
 
 while True:
-    user_input = input("You: ").lower()
+    text = input("Enter a sentence: ")
 
-    if user_input == "bye":
-        print("Bot:", responses["bye"])
+    if text.lower() == 'exit':
+        print("Goodbye! 👋")
         break
 
-    response = responses.get(user_input, "I don't understand that. Try something else.")
-    print("Bot:", response)
+    blob = TextBlob(text)
+    polarity = blob.sentiment.polarity
+
+    if polarity > 0:
+        print("🙂 Sentiment: Positive\n")
+    elif polarity < 0:
+        print("🙁 Sentiment: Negative\n")
+    else:
+        print("😐 Sentiment: Neutral\n")
